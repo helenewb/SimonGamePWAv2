@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700|Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:host {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Josefin Sans', 'Verdana', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    background: #000;
+}
+
+main {
+    height: 85vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+section {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+section button { 
+    flex: 1 1 49%;
+    height: 100px;
+    border: 5px solid #FFF;
+    box-shadow: 0px 0px 3px 0px rgb(255, 255, 255, 1);
+    margin: .5%;
+}
+
+section button.btnYellow {
+    background: rgba(255,255,0, 0.7);
+    border-radius: 80px 15px 0px 15px;
+}
+
+section button.btnYellow.flash {
+    background: rgba(255,255,0, 1);
+}
+
+section button.btnRed {
+    background: rgba(255,0,0,0.7);
+    border-radius: 15px 80px 15px 0px;
+}
+
+section button.btnRed.flash {
+    background: rgba(255,0,0,1);
+}
+
+section button.btnGreen {
+    background: rgba(0,128,0,0.7);
+    border-radius: 0px 15px 80px 15px;
+}
+
+section button.btnGreen.flash {
+    background: rgba(0,128,0,1);
+}
+
+section button.btnBlue {
+    background: rgba(0,0,255,0.7);
+    border-radius: 15px 0px 15px 80px;
+}
+
+section button.btnBlue.flash {
+    background: rgba(0,0,255,1);
+}
+
+button#startGame {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 30px;
+    transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);
+    font-weight: bold;
+    color: #FFF;
+    padding: .75rem 2rem;
+    background: #9a0000;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0px rgba(255,255,255,0.8);
+}
+
+button#startGame:hover, button#startGame:focus, button#startGame:active {
+    letter-spacing: 0.125rem;
+}
+
+
+#gameLevel, #introduction {
+    margin: 20px 0 0 0;
+}
+
+#introduction {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.alert {
+    font-family: 'Press Start 2P', cursive;
+    width: 200px;
+    position: absolute;
+    padding: 10px;
+    border: 3px solid #FFF;
+    display: none;
+    transform: rotate(-10deg);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#correct {
+    background: green;
+}
+
+#incorrect {
+    background: red;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+#loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: all 2000ms ease-in-out;
+    opacity: 1;
+    background: linear-gradient(to right, #fff, #e2e2e2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader.is-hidden {
+    opacity: 0;
+}
+
+#loader img {
+    transition: -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+       transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 4s linear infinite;
+    animation: rotating 4s linear infinite;
+}
+
+#installprompt {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+    z-index: 1;
+    font-style: normal;
+}
+
+#installprompt svg {
+    height: 40px;
+    width: 40px;
+}
+
+svg {
+    width: 25px;
+    margin-right: 20px;
+}
+
+path {
+    fill: #fff;
+}

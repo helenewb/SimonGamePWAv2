@@ -1,0 +1,23 @@
+{
+  "name": "mobile_hewe_simongamepwav2",
+  "version": "1.0.0",
+  "description": "simon game pwa using js",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helenewb/SimonGamePWAv2.git"
+  },
+  "author": "hewe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helenewb/SimonGamePWAv2/issues"
+  },
+  "homepage": "https://github.com/helenewb/SimonGamePWAv2#readme",
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "browser-sync": "^2.26.5"
+  }
+}
