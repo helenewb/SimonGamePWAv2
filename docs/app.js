@@ -1,31 +1,14 @@
 (function () {
-    'use strict';
+    //'use strict';
     
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-            .catch(console.error);
-    }
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker.register('sw.js')
+    //         .catch(console.error);
+    // }
     
-
-    var loader = document.getElementById('loader');
-    setTimeout(function () {
-        loader.firstChild.classList.add('rotating');
-    }, 700);
-    setTimeout(function () {
-        loader.classList.add('is-hidden');
-    }, 1400);
-    setTimeout(function () {
-        loader.remove();
-    }, 3400);
-
-    // setup levels
-    var levels = [
-        [0, 1, 3, 2],
-        [0, 0, 1, 3, 1],
-        [0, 1, 3, 2, 3, 1, 3],
-        [1, 3, 3, 1, 0, 2],
-        [0, 3, 0, 1, 2, 1, 0]
-    ];
+    // setup seqList
+    var seq = [Math.floor(Math.random()*4)];
+    var seqList = [seq];
     var levelIdx = 0;
     var selectedLevel = [];
 
@@ -75,9 +58,23 @@
         }, 150);
     }
 
+    //LEVEL - which is shown/counter
     function setLevel(level) {
+        console.log(level);
+        var arr = [];
+        if(level == 0) {
+            console.log("arr = " +arr[0]);
+        }
+        else{
+            arr = seqList[level -1];
+            arr.push(Math.floor(Math.random()*4));
+            seqList.push(arr);
+            console.log("further down: "+seqList[level]);
+        }
+       
+        
         levelIdx = level;
-        selectedLevel = levels[levelIdx];
+        selectedLevel = seqList[levelIdx];
         document.getElementById('level').innerHTML = levelIdx;
     }
 
