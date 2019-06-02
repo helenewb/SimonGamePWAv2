@@ -20,9 +20,8 @@
     var selectedIdx = -1;
     var tmr = null;
     var items = document.querySelectorAll('.btnClick'); //get all 4 buttons in items-array
-    console.log('items', items.length);
 
-    //  wire up buttons
+    // add Eventlistener to buttons
     var watchInput = false;
     items.forEach(function (item) {
         item.addEventListener('click', function () {
@@ -30,7 +29,9 @@
                 flashItem(item);
                 var clickedItem = parseInt(item.id.split('-')[1], 10);
                 console.log(clickedItem);
+
                 var expectedItem = selectedLevel[selectedIdx];
+
                 // check input
                 if (clickedItem === expectedItem) {
                     console.log('CORRECT');
@@ -41,7 +42,7 @@
                 selectedIdx++;
                 if (selectedIdx === selectedLevel.length) {
                     watchInput = false;
-                    setLevel(levelIdx + 1);
+                    setLevel(levelIdx + 1); //for counter display
                     document.getElementById('correct').style.display = 'block';
                 }
             }
@@ -70,24 +71,21 @@
         addClass(item, 'flash');
         setTimeout(function () {
             removeClass(item, 'flash');
-        }, 150);
+        }, 250);
     }
 
     //LEVEL - which is shown/counter
     function setLevel(level) {
         console.log(level);
-        var arr = [];
+        var arr = []; //inbetween storage
         if(level == 0) {
-            console.log("arr = " +arr[0]);
         }
         else{
             arr = seqList[level -1];
             arr.push(Math.floor(Math.random()*4));
-            seqList.push(arr);
-            console.log("further down: "+seqList[level]);
+            seqList.push(arr); //ad new level-playlist to seqList
         }
        
-        
         levelIdx = level;
         selectedLevel = seqList[levelIdx];
         document.getElementById('level').innerHTML = levelIdx;
@@ -160,7 +158,7 @@
     }
 
     function nextItem() {
-        tmr = null;
+        tmr = null; //time between flashing
         var currentIdx = -1;
         selectedIdx++;
         if (selectedIdx < selectedLevel.length) {
@@ -178,13 +176,14 @@
             // allow a pause before next flash
             window.setTimeout(function () {
                 postNext(currentIdx);
-            }, 150);
+            }, 250);
         } else {
             // no previous flash so just set next
             postNext(currentIdx);
         }
     }
 
+    //whilst playing one button after another
     function postNext(currentIdx) {
         if (currentIdx > -1) {
             setItem(currentIdx);
