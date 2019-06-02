@@ -65,7 +65,8 @@ section button.btnRed {
 }
 
 section button.btnRed.flash {
-    background: rgba(255,0,0,1);
+    /* background: rgba(255,0,0,1); */
+    background: pink;
 }
 
 section button.btnGreen {
