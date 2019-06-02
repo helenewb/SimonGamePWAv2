@@ -1,10 +1,10 @@
 (function () {
-    //'use strict';
+    'use strict';
     
-    // if ('serviceWorker' in navigator) {
-    //     navigator.serviceWorker.register('sw.js')
-    //         .catch(console.error);
-    // }
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .catch(console.error);
+    }
     
     // setup seqList
     var seq = [Math.floor(Math.random()*4)];

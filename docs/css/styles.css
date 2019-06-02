@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -92,7 +91,7 @@ button#startGame {
     letter-spacing: 0.05rem;
     margin-top: 35px;
     width: 200px;
-    /* transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95); */
+    /* transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);  */
     font-weight: bold;
     color: #FFF;
     padding: .75rem 2rem;
@@ -148,7 +147,7 @@ button#startGame:hover, button#startGame:focus, button#startGame:active {
     position: absolute;
     right: 10px;
     top: 10px;
-    /* display: none; */
+    display: none;
     z-index: 1;
     font-style: normal;
 }
