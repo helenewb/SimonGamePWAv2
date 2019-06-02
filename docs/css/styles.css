@@ -1,4 +1,4 @@
-//@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700|Press+Start+2P&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700|Press+Start+2P&display=swap'); */
 
 * {
     margin: 0;
@@ -123,13 +123,14 @@ button#startGame:hover, button#startGame:focus, button#startGame:active {
 .alert {
     font-family: Impact;
     letter-spacing: 0.05rem;
-    width: 200px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    margin-left: -12px;
-    margin-right: auto; 
-    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px; 
+    padding: 40px 10px;
     border: 2px solid #FFF;
-    border-radius: 40px;
+    border-radius: 45px;
     display: none;
     /* transform: rotate(-10deg); */
     text-align: center;

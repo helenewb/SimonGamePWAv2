@@ -2,12 +2,12 @@
     "name": "Simon Says",
     "short_name": "Simon Says",
     "display": "standalone",
-    "scope": "/simonpwa/",
-    "start_url": "/simonpwa/",
+    "scope": "/SimonGamePWAv2/",
+    "start_url": "/SimonGamePWAv2/",
     "orientation": "portrait",
     "background_color": "#000000",
     "theme_color": "#000000",
-    "description": "Simons Says - Testdrive",
+    "description": "Simon Game",
     "icons": [
         {
             "src": "icons/icon512.png",
