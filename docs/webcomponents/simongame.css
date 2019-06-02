@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:host {
+  font-family: sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    background: #795484;
+}
+
+main {
+    height: 85vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 15pt;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    margin: 40px 0 30px 0;
+    text-align: center;
+}
+
+section {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+section button { 
+    flex: 1 1 49%;
+    height: 100px;
+    border: 2px solid #FFF;
+    box-shadow: 0px 0px 3px 0px rgb(255, 255, 255, 1);
+    margin: .5%;
+}
+
+section button.btnYellow {
+    background: #FDFD96; 
+    border-radius: 80px 15px 0px 15px;
+}
+
+section button.btnYellow.flash {
+    background: #FCFC46;
+}
+
+section button.btnRed {
+    /* background: rgba(255,0,0,0.7); */
+    border-radius: 15px 80px 15px 0px;
+    background: #EFC6D3;
+}
+
+section button.btnRed.flash {
+    background: #EA83AC;
+}
+
+section button.btnGreen {
+    background: #9CE69C;
+    border-radius: 0px 15px 80px 15px;
+}
+
+section button.btnGreen.flash {
+    background: #75D175;
+}
+
+section button.btnBlue {
+    background: #7FD7E2;
+    border-radius: 15px 0px 15px 80px;
+}
+
+section button.btnBlue.flash {
+    background: #1EB0D8;
+}
+
+button#startGame {
+    font-family: sans-serif;
+    font-size: 11pt;
+    letter-spacing: 0.05rem;
+    margin-top: 35px;
+    width: 200px;
+    /* transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);  */
+    font-weight: bold;
+    color: #FFF;
+    padding: .75rem 2rem;
+    background:  #75D175;
+    /* text-transform: uppercase; */
+    /* cursor: pointer; */
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 8px 0px rgba(255,255,255,0.8);
+}
+
+button#startGame:hover, button#startGame:focus, button#startGame:active {
+    letter-spacing: 0.125rem;
+}
+
+button#resetBtn {
+    /* font-family: Impact; */
+    font-family: sans-serif;
+    font-size: 11pt;
+    letter-spacing: 0.05rem;
+    margin-top: 20px;
+    width: 200px;
+    /* transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);  */
+    font-weight: bold;
+    color: #FFF;
+    padding: .75rem 2rem;
+    background:  #EA83AC;
+    /* text-transform: uppercase; */
+    /* cursor: pointer; */
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 8px 0px rgba(255,255,255,0.8);
+}
+
+button#resetBtn:hover, button#resetBtn:focus, button#resetBtn:active {
+    letter-spacing: 0.125rem;
+}
+
+#gameLevel, #introduction {
+    margin: 20px 0 0 0;
+}
+
+#introduction {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.alert {
+    font-family: Impact;
+    letter-spacing: 0.05rem;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-left: 50px;
+    margin-right: 50px; 
+    padding: 40px 10px;
+    border: 2px solid #FFF;
+    border-radius: 45px;
+    display: none;
+    /* transform: rotate(-10deg); */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#correct {
+    background: #75D175;
+}
+
+#incorrect {
+    background:#EA83AC;
+}
+
+#installprompt {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+    z-index: 1;
+    font-style: normal;
+}
+
+#installprompt svg {
+    height: 40px;
+    width: 40px;
+}
+
+svg {
+    width: 25px;
+    margin-right: 20px;
+}
+
+path {
+    fill: #fff;
+}

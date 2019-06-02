@@ -1,23 +1,25 @@
 (function () {
     'use strict';
     
+    //register Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
             .catch(console.error);
     }
     
-    // setup seqList
-    var seq = [Math.floor(Math.random()*4)];
-    var seqList = [seq];
-    var levelIdx = 0;
-    var selectedLevel = [];
+    // setup seqList (sequence playlist with buttons flashing in order - to check, to animate)
+    var seq = [Math.floor(Math.random()*4)]; //initializes first sequence with random button
+    var seqList = [seq]; //playlist consisting of seq-Arrays
+    var levelIdx = 0; //level-Counter
+    var selectedLevel = []; //array from seqList at given level
 
     setLevel(0);
 
-    // setup buttons
+
+    // initialize buttons
     var selectedIdx = -1;
     var tmr = null;
-    var items = document.querySelectorAll('.btnClick');
+    var items = document.querySelectorAll('.btnClick'); //get all 4 buttons in items-array
     console.log('items', items.length);
 
     //  wire up buttons
