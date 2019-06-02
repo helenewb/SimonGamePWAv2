@@ -51,6 +51,16 @@
         start();
     });
 
+    document.getElementById('resetBtn').addEventListener('click', function () {
+        console.log('reset button clicked');
+        reset();
+    });
+
+    function reset() {
+        level = 0;
+        setLevel();
+    }
+
     function flashItem(item) {
         addClass(item, 'flash');
         setTimeout(function () {
