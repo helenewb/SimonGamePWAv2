@@ -1,6 +1,6 @@
 {
-    "name": "Simon Says",
-    "short_name": "Simon Says",
+    "name": "Simon Game",
+    "short_name": "simongame",
     "display": "standalone",
     "scope": "/SimonGamePWAv2/",
     "start_url": "/SimonGamePWAv2/",

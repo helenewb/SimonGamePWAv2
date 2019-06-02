@@ -1,4 +1,4 @@
-const swCache = 'simon-pwa-v1';
+const swCache = 'https://helenewb.github.io/SimonGamePWAv2/';
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(swCache)
