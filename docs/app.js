@@ -57,8 +57,11 @@
     });
 
     function reset() {
-        level = 0;
-        setLevel();
+        seq = [Math.floor(Math.random()*4)];
+        seqList = [seq];
+        levelIdx = 0;
+        selectedLevel = [];
+        setLevel(0);
     }
 
     function flashItem(item) {
