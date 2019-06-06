@@ -1,12 +1,14 @@
-const swCache = 'SimonGamePWA-cache/';
+const swCache = 'SimonGamePWA-cache';
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(swCache)
             .then(cache => cache.addAll([
                 '/SimonGamePWAv2/',
-                'index.html',                
+                'index.html',
                 'app.js',
                 'css/styles.css',
+                'webcomponents/simongame.css',
+                'webcomponents/simongame.js',
                 'manifest.webmanifest',
                 'icons/icon512.png',
                 'icons/icon16.png',

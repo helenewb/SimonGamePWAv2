@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 :host {
@@ -43,7 +44,7 @@ section {
     align-items: center;
 }
 
-section button { 
+section button {
     flex: 1 1 49%;
     height: 100px;
     border: 2px solid #FFF;
@@ -52,7 +53,7 @@ section button {
 }
 
 section button.btnYellow {
-    background: #FDFD96; 
+    background: #FDFD96;
     border-radius: 80px 15px 0px 15px;
 }
 
@@ -150,7 +151,7 @@ button#resetBtn:hover, button#resetBtn:focus, button#resetBtn:active {
     height: 100px;
     position: absolute;
     margin-left: 50px;
-    margin-right: 50px; 
+    margin-right: 50px;
     padding: 40px 10px;
     border: 2px solid #FFF;
     border-radius: 45px;

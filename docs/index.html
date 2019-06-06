@@ -6,8 +6,8 @@
     <title>SimonGame</title>
     <meta name="author" content="hewe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link href="css/styles.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -17,7 +17,7 @@
     <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
-    
+
 </head>
 
 <body>
@@ -29,36 +29,11 @@
             </svg>
         </a>
     </div>
-    <main id="simon-game">
-        <h1>Pastel Simon Game</h1>
+    <simon-game></simon-game>
 
-        <section id="gameBoard">
-            <div class="alert" id="correct">Perfect!</div>
-            <div class="alert" id="incorrect">Wrong!</div>
-            <button id="button-0" class="btnClick btnYellow"></button>
-            <button id="button-1" class="btnClick btnRed"></button>
-            <button id="button-2" class="btnClick btnBlue"></button>
-            <button id="button-3" class="btnClick btnGreen"></button>
-        </section>
-
-        <button id="startGame">Let's start</button>
-        <button id="resetBtn">Reset</button>
-
-    
-        <div id="gameLevel">
-            Level <span id="level"></span>
-        </div>
-
-        <div id="introduction">
-            Click the "Start" button then watch the pattern of the flashing panels.<br>
-            Press the panels in the same order you saw them flash.
-        </div>
-
-    </main>
- 
- <script async src="app.js"></script>
+ <script async src="app.js" type="module"></script>
     <script>
-        // Code to handle install prompt on desktop
+        //Code to handle install prompt on desktop
         let deferredPrompt;
         const installPrompt = document.querySelector('#installprompt');
         const installButton = document.querySelector('#installprompt .addtohome');
