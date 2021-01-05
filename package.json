@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/helenewb/SimonGamePWAv2#readme",
   "devDependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "browser-sync": "^2.26.5"
   }
 }
